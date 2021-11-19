@@ -1,0 +1,1 @@
+quick_sort(0, len(array) - 1, array)
