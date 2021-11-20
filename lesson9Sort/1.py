@@ -14,19 +14,21 @@ def bubble(li):
         for k in li:
             if min > k:
                 sort = False
+            else:
+                min = k
         
-        # if swapped == False or c == 0:
-        #     print("last step : {} move[None]".format(li))
-        #     break
-        # else:
-        #     print("{} step : {} move[{}]".format(i+1,li,c+1))
+        
         if swapped == True:
             print("{} step : {} move[{}]".format(i+1,li,c+1))
         elif sort == True:
             if c==0:
                 print("last step : {} move[None]".format(li))
             else:
-                print("last step : {} move[{}]".format(li,c+1))
+                if len(li) == 4:
+                    print("last step : {} move[{}]".format(li,c+1))
+                    break
+                else:
+                    print("last step : {} move[{}]".format(li,c+1))
             break
         
 
