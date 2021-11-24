@@ -4,16 +4,12 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
-def list_to_bst(list_nums,i,j):
-    
-    if i > j:
-        return None
-    
-    mid = (i+j+1)//2
-    root = TreeNode(list_nums[mid])
-    root.left = list_to_bst(list_nums,i,mid-1)
-    root.right = list_to_bst(list_nums,mid+1,j)
-    return root
+
+
+def list_to_bst(list_nums):
+       #code here
+    return node
+
 
 
 def preOrder(node): 
@@ -24,16 +20,19 @@ def preOrder(node):
     preOrder(node.right)   
 
 
+
 def printBST(node,level = 0):
+
     if node != None:
+
         printBST(node.right, level + 1)
+
         print('     ' * level, node.val)
+
         printBST(node.left, level + 1)
 
-
 list_nums = sorted([int(item) for item in input("Enter list : ").split()])
-
-result = list_to_bst(list_nums,0,len(list_nums)-1)
+result = list_to_bst(list_nums)
 
 print("\nList to a height balanced BST : ")
 print(preOrder(result))

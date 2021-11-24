@@ -4,7 +4,7 @@ def insert(li):#น้อยไปมาก
         temp = li[i]
         for j in range(i,-1,-1):
             # print(i,j)
-            if temp > li[j-1] and j != 0:
+            if li[j-1] < temp  and j != 0:
                 li[j] = li[j-1]
             else:
                 li[j] = temp
